@@ -12,7 +12,7 @@ class Dropdown extends Component {
         label: typeof props.placeholder === 'undefined' ? DEFAULT_PLACEHOLDER_STRING : props.placeholder,
         value: ''
       },
-      isOpen: false
+      isOpen: true
     }
     this.mounted = true
     this.handleDocumentClick = this.handleDocumentClick.bind(this)
