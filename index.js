@@ -12,7 +12,7 @@ class Dropdown extends Component {
         label: typeof props.placeholder === 'undefined' ? DEFAULT_PLACEHOLDER_STRING : props.placeholder,
         value: ''
       },
-      isOpen: true
+      isOpen: false
     }
     this.mounted = true
     this.handleDocumentClick = this.handleDocumentClick.bind(this)
@@ -57,15 +57,16 @@ class Dropdown extends Component {
   }
 
   setValue (value, label) {
-    let newState = {
-      selected: {
-        value,
-        label
-      },
-      isOpen: false
-    }
-    this.fireChangeEvent(newState)
-    this.setState(newState)
+    alert(value)
+//     let newState = {
+//       selected: {
+//         value,
+//         label
+//       },
+//       isOpen: false
+//     }
+//     this.fireChangeEvent(newState)
+//     this.setState(newState)
   }
 
   fireChangeEvent (newState) {
