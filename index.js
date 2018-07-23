@@ -56,17 +56,19 @@ class Dropdown extends Component {
     }
   }
 
-  setValue (value, label) {
-    if(value!="alwaysOpen"){
-      let newState = {
+   setValue(value, label) {
+    let newState = {
       selected: {
         value,
         label
       },
-      isOpen: false
-      }
-      this.fireChangeEvent(newState)
-      this.setState(newState)
+    }
+    this.setState(newState)
+    this.fireChangeEvent(newState)
+    if (value != "alwaysOpen") {
+      this.setState({
+        isOpen: false
+      })
     }
   }
 
