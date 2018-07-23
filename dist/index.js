@@ -99,11 +99,15 @@ var Dropdown = function (_Component) {
         selected: {
           value: value,
           label: label
-        },
-        isOpen: false
+        }
       };
       this.fireChangeEvent(newState);
       this.setState(newState);
+      if (value != "alwaysOpen") {
+      this.setState({
+        isOpen: false
+      })
+      }
     }
   }, {
     key: 'fireChangeEvent',
